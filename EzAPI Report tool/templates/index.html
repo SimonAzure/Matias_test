@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report JSON Builder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="/">EzAPI Report</a>
+        </h1>
+    </header>
+    <main>
+        <section id="report-filter">
+            <h2>Report JSON Builder</h2>
+            <form action="{{ url_for('build_report') }}" method="POST">
+                <label for="report_type">Report Type:</label>
+                <select id="report_type" name="report_type" required>
+                    <option value="" disabled selected>Select a report type</option>
+                    <option value="network_analytics">network_analytics</option>
+                    <option value="seller_fill_and_delivery">seller_fill_and_delivery</option>
+                </select>
+
+                <label for="columns">Columns:</label>
+		<div id="columns-container">
+		</div>
+
+		<label for="timezone">Timezone:</label>
+                <select id="timezone" name="timezone" required>
+                <option value="UTC">UTC</option>
+                <option value="Europe/London">Europe/London</option>
+                <option value="Europe/Paris">Europe/Paris</option>
+                <!-- Add more timezone options as needed -->
+                </select>
+
+                <label for="format">Format:</label>
+                <select id="format" name="format" required>
+                <option value="csv">csv</option>
+                <option value="excel">excel</option>
+                <option value="html">html</option>
+                </select>
+
+		<label for="report_interval">Report Interval:</label>
+                <select id="report_interval" name="report_interval">
+                <option value="" disabled selected>Select an Interval</option>
+                <option value="current_hour">current_hour</option>
+                <option value="last_hour">last_hour</option>
+                <option value="today">today</option>
+		<option value="yesterday">last_48_hours</option>
+                <option value="last_7_days">last_7_days</option>
+                </select>
+
+                <label for="start_date">Start Date:</label>
+                <input type="date" id="start_date" name="start_date" max="{{ current_date }}">
+
+		<label for="end_date">End Date:</label>
+		<input type="date" id="end_date" name="end_date" max="{{ current_date }}">
+
+                <input type="submit" value="Build Report">
+            </form>
+        </section>
+        <section id="report-meta">
+            <h2>Report Meta - Get Your Metrics</h2>
+		<form action="{{ url_for('get_report') }}" method="GET">
+                <label for="report_type_meta">Report Type:</label>
+                <select id="report_type_meta" name="report_type" required>
+                    <option value="" disabled selected>Select a report type</option>
+                    <option value="network_analytics">network_analytics</option>
+                    <option value="ad_performance">seller_fill_and_delivery</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <input type="submit" value="Get Metrics">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p class="text-footer">All rights reserved &copy; Buy-Side team</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

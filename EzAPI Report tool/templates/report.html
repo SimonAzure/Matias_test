@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Report Results</h1>
+    </header>
+    <main>
+        <section id="report-results">
+            <h2>Report Response</h2>
+	    <pre><code class="json" id="report-json">{{ report_response }}</code></pre>
+        </section>
+
+    </main>
+    <script src="{{ url_for('static', filename='jsonlint.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

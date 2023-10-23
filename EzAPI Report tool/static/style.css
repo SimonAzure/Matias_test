@@ -1,0 +1,141 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #fff, #eee); /* White background */
+    color: #000; /* Black text */
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #000; /* Black header */
+    padding: 20px;
+    color: #fff; /* White text in the header */
+    text-align: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  h1 {
+    font-size: 30px;
+    margin: 0;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+  }
+  
+  section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    color: #000; /* Black text in sections */
+  }
+  
+  h2 {
+    color: #fff; /* Black headings */
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  form {
+    max-width: 400px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff; /* Black labels */
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  select,
+  input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #000; /* Black borders */
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #000; /* Black text in input elements */
+  }
+  
+  input[type="submit"] {
+    background-color: #fff; /* Black submit button */
+    color: #000; /* White text on the button */
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #333; /* Slightly lighter on hover */
+    color: #fff;
+  }
+  
+  #report-filter {
+    background-color: #000; /* Black background for the report filter section */
+    color: #fff; /* White text in this section */
+  }
+  
+  #report-meta {
+    background-color: #000; /* Black background for the report meta section */
+    color: #fff; /* White text in this section */
+  }
+  
+  pre {
+    background-color: #f0f0f0; /* Slightly off-white */
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  pre code {
+    white-space: pre-wrap;
+  }
+  
+  .json {
+    color: #000; /* Black text in JSON */
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  input[type="checkbox"]:checked + label {
+    font-weight: bold;
+  }
+  
+  footer {
+    background-color: #000;
+    padding: 1rem;
+  }
+  
+  footer .text-footer {
+    text-align: center;
+    color: #fff;
+  }
